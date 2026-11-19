@@ -10,3 +10,5 @@ export function details(r,d){
  if(r.property&&['Nova Scotia','British Columbia'].includes(r.province))href(d,'Search this property ID in Federal Property Atlas','https://coolcode.ca/federal-property-atlas/?region='+(r.province==='Nova Scotia'?'NS':'BC')+'&q='+encodeURIComponent(r.property));
 }
 export const columns=()=>[...primaryColumns,['Source collection',r=>r.source],['Asking or recorded price',r=>r.price],['Price basis',r=>r.priceLabel],['Fiscal year',r=>r.year],['Provincial file',r=>r.file]];
+
+export const sorts=[['','Record name'],['place','Municipality / area',(a,b)=>a.place.localeCompare(b.place)],['fiscal','Latest disposal year',(a,b)=>(b.year||'').localeCompare(a.year||'')]];
