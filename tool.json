@@ -1,16 +1,38 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "surplus-crown",
+  "title": "Surplus Crown",
+  "description": "Follow federal sale listings, land identified for housing and Nova Scotia’s recorded land disposals. See which source supports each status and price.",
+  "category": "places",
+  "tags": [
+    "surplus",
+    "land bank",
+    "property disposal",
+    "real estate",
+    "Nova Scotia"
+  ],
+  "icon": "building-2",
+  "url": "/surplus-crown/",
+  "source": "https://github.com/jsdyer/surplus-crown",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "snapshot",
+    "detail": "PSPC publishes federal sale listings and housing land-bank records. Nova Scotia reports completed provincial property disposals by fiscal year.",
+    "cadence": "Weekly",
+    "probes": [
+      {
+        "url": "https://coolcode.ca/surplus-crown/data/status.json",
+        "path": [
+          "retrieved"
+        ],
+        "label": "Source retrieved",
+        "count_at": {
+          "path": [
+            "count"
+          ],
+          "unit": "records"
+        }
+      }
+    ]
   }
 }

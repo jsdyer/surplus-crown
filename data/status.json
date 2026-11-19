@@ -1,0 +1,25 @@
+{
+  "retrieved": "2026-11-19",
+  "count": 279,
+  "mapped": 90,
+  "sources": [
+    {
+      "name": "Federal real estate for sale",
+      "url": "https://open.canada.ca/data/en/dataset/e7a3accb-d419-4d8a-b612-0a601ba4540c",
+      "download": "https://donnees-data.tpsgc-pwgsc.gc.ca/br1/bi-rp/bi-rp.csv"
+    },
+    {
+      "name": "Canada Public Land Bank",
+      "url": "https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/public-lands-homes/bank-mapping-tool.html",
+      "download": "https://idgsi-rpgdi-arcgis.spac-pspc.gc.ca/gisserver/rest/services/Hosted/Public_Land_Bank/FeatureServer/2/query?where=1%3D1&outFields=%2A&outSR=4326&f=json"
+    },
+    {
+      "name": "Nova Scotia real property disposals",
+      "url": "https://data.novascotia.ca/d/2kw3-tjdw",
+      "download": "https://data.novascotia.ca/api/views/2kw3-tjdw/rows.csv?accessType=DOWNLOAD"
+    }
+  ],
+  "groups": [
+    "CA"
+  ]
+}
